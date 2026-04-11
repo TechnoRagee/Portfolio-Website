@@ -1,0 +1,140 @@
+/* ============================================================
+   Footer Styles (Footer.css)
+   ------------------------------------------------------------
+   Three-column layout: brand left | nav center | socials right
+   All columns vertically centered with each other.
+   ============================================================ */
+
+.footer {
+  background: var(--color-text-primary);
+  color: #ffffff;
+  margin-top: auto;
+}
+
+/* ── Main footer row ─────────────────────────────────────── */
+.footer__inner {
+  display: flex;
+  align-items: center;        /* vertically center ALL columns */
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+}
+
+/* ── Brand block (left) ──────────────────────────────────── */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer__dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  margin-left: 3px;
+}
+
+.footer__tagline {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+}
+
+/* ── Nav links (center) ──────────────────────────────────── */
+.footer__nav {
+  display: flex;
+  flex-direction: row;          /* horizontal links in center */
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.footer__link {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: var(--color-primary);
+}
+
+/* ── Social icons (right) ────────────────────────────────── */
+.footer__socials {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+.footer__social-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+  text-decoration: none;
+}
+
+.footer__social-btn:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ── Copyright bar ───────────────────────────────────────── */
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: var(--space-sm);
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-md);
+    padding: var(--space-lg) 0;
+  }
+
+  .footer__brand {
+    align-items: center;
+  }
+
+  .footer__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1rem;
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+}

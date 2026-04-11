@@ -1,0 +1,63 @@
+# Database Integration with MongoDB
+
+Vareen, you've requested to connect your portfolio to a MongoDB database. While the contact form is already connected, we can make your website much more professional by moving your **Projects** and **Skills** into MongoDB as well. This way, you can manage your content from the database without touching the code.
+
+## User Review Required
+
+> [!IMPORTANT]
+> To use a "real" online database, you will need to create a free account at [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database). I will provide the steps to do this below. 
+
+## Proposed Changes
+
+### 🟢 Backend (Node.js + Express)
+
+#### [NEW] [Project.js](file:///c:/Users/User/OneDrive/Desktop/Portfolio%20Website/server/models/Project.js)
+Define the schema for your portfolio projects (title, description, tech stack, links, etc.).
+
+#### [NEW] [Skill.js](file:///c:/Users/User/OneDrive/Desktop/Portfolio%20Website/server/models/Skill.js)
+Define the schema for your skills (name, level, category, icon).
+
+#### [NEW] [data.js](file:///c:/Users/User/OneDrive/Desktop/Portfolio%20Website/server/routes/data.js)
+Create API routes to:
+- `GET /api/projects` - Fetch all projects.
+- `GET /api/skills` - Fetch all skills.
+- `POST /api/seed` - A special temporary route to quickly fill your database with your current data.
+
+#### [MODIFY] [server.js](file:///c:/Users/User/OneDrive/Desktop/Portfolio%20Website/server/server.js)
+Register the new data routes.
+
+---
+
+### 🔵 Frontend (React)
+
+#### [MODIFY] [Home.jsx](file:///c:/Users/User/OneDrive/Desktop/Portfolio%20Website/client/src/pages/Home.jsx)
+Fetch "Featured Projects" from the backend instead of the local file.
+
+#### [MODIFY] [Skills.jsx](file:///c:/Users/User/OneDrive/Desktop/Portfolio%20Website/client/src/pages/Skills.jsx)
+Fetch the skills list from the backend.
+
+#### [MODIFY] [Projects.jsx](file:///c:/Users/User/OneDrive/Desktop/Portfolio%20Website/client/src/pages/Projects.jsx)
+Fetch the full projects archive from the backend.
+
+---
+
+## Instructions for MongoDB Atlas
+
+1. **Sign Up**: Go to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register) and create a free account.
+2. **Deploy a Database**: Choose the "Free" tier (M0) and create a cluster.
+3. **Database User**: Create a user with a username and password (keep these safe!).
+4. **Network Access**: Add "Allow Access from Anywhere" (0.0.0.0/0) so you can connect from your local machine.
+5. **Connection String**: Click "Connect" → "Drivers" → Copy the connection string.
+6. **Update .env**: Paste the string into `server/.env` under `MONGO_URI`.
+
+## Open Questions
+
+- Would you like me to move the "About Me" text to the database as well, or keep it in the code for easy direct editing?
+- Do you want me to keep the local data files as "backup" in case the database connection fails?
+
+## Verification Plan
+
+### Manual Verification
+- I will run the Backend server and check the `Seed` route to ensure data is saved to the database.
+- I will verify that the Home, Skills, and Projects pages load correctly by pulling data from the API.
+- I will test the contact form one more time to ensure the database connection remains stable.

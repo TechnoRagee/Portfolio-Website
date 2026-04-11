@@ -1,0 +1,176 @@
+/* ============================================================
+   Navbar Styles (Navbar.css)
+   ------------------------------------------------------------
+   Covers: fixed top bar, logo, nav links, hamburger menu,
+   active link indicator, mobile dropdown, scroll shadow effect
+   ============================================================ */
+
+/* ── Fixed Top Navigation Bar ───────────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* Adds subtle shadow when user scrolls down */
+.navbar.scrolled {
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ── Logo / Brand ───────────────────────────────────────── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.navbar__logo:hover {
+  opacity: 0.85;
+}
+
+.navbar__logo-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  margin-left: 2px;
+}
+
+/* ── Desktop Navigation Links ───────────────────────────── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.navbar__link {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+/* Active link highlight */
+.navbar__link.active {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+/* ── CTA Button in Navbar ───────────────────────────────── */
+.navbar__cta {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--gradient-primary);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.navbar__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Hamburger Button (Mobile) ──────────────────────────── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text-primary);
+  border-radius: 2px;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+/* Hamburger → X animation when open */
+.navbar__hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar__hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile Dropdown Menu ───────────────────────────────── */
+.navbar__mobile {
+  display: none;
+  flex-direction: column;
+  padding: var(--space-sm);
+  background: #ffffff;
+  border-top: 1px solid var(--color-border);
+  gap: 0.25rem;
+}
+
+.navbar__mobile .navbar__link {
+  padding: 0.7rem 1rem;
+  font-size: var(--font-size-base);
+  border-radius: var(--radius-sm);
+}
+
+.navbar__mobile .navbar__cta {
+  margin-top: 0.5rem;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+}
+
+/* ── Responsive: Show hamburger on mobile ───────────────── */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__mobile {
+    display: flex;
+  }
+}
