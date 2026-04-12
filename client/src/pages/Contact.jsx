@@ -36,7 +36,7 @@ const CONTACT_INFO = [
   {
     icon: "💼",
     label: "LinkedIn",
-    value: "linkedin.com/in/vareen-aggarwal-b10b3b287",
+    value: "linkedin.com/in/vareen-aggarwal",
     link: "https://www.linkedin.com/in/vareen-aggarwal-b10b3b287?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
