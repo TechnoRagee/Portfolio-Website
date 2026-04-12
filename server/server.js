@@ -11,8 +11,10 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const dns = require("dns");
 
-// Force Google DNS to bypass local ISP blocks/failures for MongoDB Atlas
-dns.setServers(["8.8.8.8", "8.8.4.4"]);
+// Force Google DNS locally (Bypasses local ISP blocks). Do not run on Render!
+if (!process.env.RENDER) {
+  dns.setServers(["8.8.8.8", "8.8.4.4"]);
+}
 
 // Load environment variables from .env file
 dotenv.config();
