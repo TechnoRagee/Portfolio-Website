@@ -30,20 +30,20 @@ const CONTACT_INFO = [
   {
     icon: "📧",
     label: "Email",
-    value: "vareenaggarwal@gmail.com",
-    link: "mailto:vareenaggarwal@gmail.com",
+    value: "vareennimi@gmail.com",
+    link: "mailto:vareennimi@gmail.com",
   },
   {
     icon: "💼",
     label: "LinkedIn",
-    value: "linkedin.com/in/vareenaggarwal",
-    link: "https://linkedin.com/in/vareenaggarwal",
+    value: "linkedin.com/in/vareen-aggarwal-b10b3b287",
+    link: "https://www.linkedin.com/in/vareen-aggarwal-b10b3b287?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     icon: "🐙",
     label: "GitHub",
-    value: "github.com/vareenaggarwal",
-    link: "https://github.com/vareenaggarwal",
+    value: "github.com/TechnoRagee",
+    link: "https://github.com/TechnoRagee/Portfolio-Website",
   },
   {
     icon: "📍",
