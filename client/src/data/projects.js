@@ -8,24 +8,22 @@
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Website",
+    title: "BookStore APP",
     description:
-      "A fully responsive e-commerce web application with product listing, cart functionality, and checkout flow. Built with a clean UI for seamless shopping experience.",
-    tech: ["React", "Node.js", "MongoDB", "CSS"],
-    github: "https://github.com/vareenaggarwal",
-    live: "#",
-    category: "Full Stack",
+      "Developed a fully responsive Online Bookstore web application using React.js, Node.js, and MongoDB. Implemented features like product listing, cart management, and secure checkout. Designed a clean UI for a smooth and user-friendly shopping experience.",
+    tech: ["React", "MongoDB", "CSS"],
+    github: "https://github.com/TechnoRagee/BookStore-App",
+    category: "Frontend",
     // Set to true to mark as featured on home page
     featured: true,
   },
   {
     id: 2,
-    title: "Task Manager App",
+    title: "Digital Bazaar",
     description:
-      "A productivity app to manage daily tasks with drag-and-drop support, priority labels, and real-time updates. Designed with a minimalist light theme.",
+      "A fully responsive e-commerce web application with product listing, cart functionality, and checkout flow. Built with a clean UI for seamless shopping experience.",
     tech: ["React", "CSS", "LocalStorage"],
-    github: "https://github.com/vareenaggarwal",
-    live: "#",
+    github: "https://github.com/TechnoRagee/Digital-Bazaar",
     category: "Frontend",
     featured: true,
   },
@@ -35,30 +33,17 @@ const projects = [
     description:
       "This personal portfolio website showcasing my skills, projects, and contact information. Built with React.js and Node.js with MongoDB backend.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/vareenaggarwal",
-    live: "#",
+    github: "https://github.com/TechnoRagee/Portfolio-Website",
     category: "Full Stack",
     featured: true,
   },
   {
     id: 4,
-    title: "Restaurant Landing Page",
+    title: "Travelling Web Portal",
     description:
-      "A beautiful and responsive restaurant landing page with menu showcase, reservation section, and contact info. Designed using Figma and implemented in HTML/CSS.",
+      "Developed a fully responsive Travel Booking Web Portal using React.js, Node.js, and MongoDB. Enabled users to search and book flights, hotels, and cabs with a seamless UI. Implemented authentication, real-time search, and booking management features.",
     tech: ["HTML", "CSS", "Figma"],
-    github: "https://github.com/vareenaggarwal",
-    live: "#",
-    category: "Frontend",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Weather Dashboard",
-    description:
-      "A weather dashboard that fetches real-time weather data using OpenWeatherMap API. Displays temperature, humidity, wind speed with a clean card-based UI.",
-    tech: ["React", "API", "CSS"],
-    github: "https://github.com/vareenaggarwal",
-    live: "#",
+    github: "https://github.com/TechnoRagee/vinatgetripmart",
     category: "Frontend",
     featured: false,
   },
