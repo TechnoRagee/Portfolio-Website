@@ -126,8 +126,8 @@ function About() {
                 Let's Talk
               </Link>
               <a
-                href="/resume.pdf"
-                download
+                href="/Vareen_Aggarwal_CV.pdf"
+                download="Vareen_Aggarwal_CV.pdf"
                 className="btn-secondary"
                 id="download-resume-btn"
               >
