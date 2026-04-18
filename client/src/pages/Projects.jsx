@@ -123,7 +123,7 @@ function Projects() {
               <p>I'm constantly building new things. Check back for updates, or find me on GitHub!</p>
             </div>
             <a
-              href="https://github.com/vareenaggarwal"
+              href="https://github.com/TechnoRagee/Portfolio-Website"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
